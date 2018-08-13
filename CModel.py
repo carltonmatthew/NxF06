@@ -320,6 +320,39 @@ class CModel:
         errorflag = "Warning 5276 located"
         return errorflag
 ################################################################################# 
+    def ProcessMessage4690(self,F_F06):# class CModel:
+        errorID=4690
+    # Function to proces message 4690
+#-->> Copy of a complee error message given below 
+# *** USER WARNING MESSAGE 4690 (CNTGAPERR)
+#     The gap between glue faces of some elements in gap pair            2 between
+#     regions            3 and            4 seems overly large. The largest values are listed
+#     in the table below:
+#
+#     ELEMENT     ELEMENT        GAP
+#
+#       33451       30778    3.17500E+00
+#       33454       30868    3.17500E+00
+#       33455       30888    3.17500E+00
+#       33457       30918    3.17500E+00
+#       33458       30958    3.17500E+00
+#       33458       30958    3.17500E+00
+#       33451       30778    3.17500E+00
+#       33451       30778    3.17500E+00
+#       33451       30788    3.17500E+00
+#       33451       30798    3.17500E+00
+#
+# *** USER WARNING MESSAGE 4690 (CNTGAPERR)
+#
+#--> NOTE: This should also store Regions in the neutral file
+#          hence a new region error list will be required, 
+#          and the code to write it to the neitral file.
+#
+##        print "Calling function ProcessError4690()"
+        print "Message 4690 WARNING MESSAGE located - Processing code To Be Completed."
+        errorflag = "Warning 4690 located"
+        return errorflag
+################################################################################# 
     def ProcessMessage9002(self,F_F06):# class CModel:
         errorID=9002
     # Function to proces message 9002
@@ -408,6 +441,9 @@ class CModel:
                     
                 elif messagenumber == 4558:
                     self.ProcessError4558(F_F06)
+                    
+                elif messagenumber == 4960:
+                    self.ProcessError4960(F_F06)
                     
                 elif messagenumber == 9002:
                     self.ProcessMessage9002(F_F06)
